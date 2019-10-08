@@ -19,3 +19,15 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/russian_docs](https://hexdocs.pm/russian_docs).
 
+## Usage
+
+### Снилс
+```elixir
+# Valid number
+RussianDocs.Snils.validate("96311715808")
+{:ok, nil}
+
+# Invalid number
+RussianDocs.Snils.validate("96311715807")
+{:error, :invalid_control_digit}
+```
