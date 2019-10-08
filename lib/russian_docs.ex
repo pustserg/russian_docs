@@ -1,18 +1,5 @@
 defmodule RussianDocs do
   @moduledoc """
-  Documentation for RussianDocs.
+  Library for validation and some manipulations with russians documents
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> RussianDocs.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
