@@ -21,7 +21,6 @@ defmodule RussianDocs.Snils do
   def validate(input) do
     string_input = stringify(input)
     cond do
-      only_numbers?(string_input)   -> {:error, :only_number_string_allowed}
       invalid_length?(string_input) -> {:error, :invalid_string_length}
       invalid_number?(string_input) -> {:error, :invalid_control_digit}
       true                          -> {:ok, nil}
@@ -29,7 +28,7 @@ defmodule RussianDocs.Snils do
   end
 
   def stringify(input) when is_binary(input) do
-    input
+    String.replace(input, ~r/\D/, "")
   end
 
   def stringify(input) when is_integer(input) do
