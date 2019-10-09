@@ -4,6 +4,18 @@ defmodule RussianDocs.Snils do
   """
 
   @doc """
+  Format snils to a pretty string as 000-000-000 00
+  """
+
+  def format(input) do
+    string_input = stringify(input)
+    case validate(string_input) do
+      {:error, _} -> {:error, :invalid_snils}
+      {:ok, _}    -> {:ok, format_snils(string_input)}
+    end
+  end
+
+  @doc """
   Validates if string is a valid snils number
   """
   def validate(input) do
@@ -54,5 +66,9 @@ defmodule RussianDocs.Snils do
 
   defp only_numbers?(input) do
     Regex.match?(~r/\D/, input)
+  end
+
+  defp format_snils(input) do
+    "#{String.slice(input, 0..2)}-#{String.slice(input, 3..5)}-#{String.slice(input, 6..8)} #{String.slice(input, 9..10)}"
   end
 end
