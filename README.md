@@ -1,6 +1,5 @@
 # RussianDocs
-
-**TODO: Add description**
+[![CircleCI](https://circleci.com/gh/pustserg/russian_docs.svg?style=svg)](https://circleci.com/gh/pustserg/russian_docs)
 
 ## Installation
 
