@@ -20,7 +20,7 @@ defmodule RussianDocs.SnilsTest do
     end
 
     test "It should be valid for integer input" do
-      assert Snils.validate(96311715808) == {:ok, nil}
+      assert Snils.validate(96_311_715_808) == {:ok, nil}
     end
 
     test "It should valid for formatted input" do
@@ -31,12 +31,12 @@ defmodule RussianDocs.SnilsTest do
   describe "format" do
     test "it should not format invalid snils" do
       assert Snils.format("96311715800") == {:error, :invalid_snils}
-      assert Snils.format(96311715800) == {:error, :invalid_snils}
+      assert Snils.format(96_311_715_800) == {:error, :invalid_snils}
     end
 
     test "it should format valid string" do
       assert Snils.format("96311715808") == {:ok, "963-117-158 08"}
-      assert Snils.format(96311715808) == {:ok, "963-117-158 08"}
+      assert Snils.format(96_311_715_808) == {:ok, "963-117-158 08"}
     end
   end
 end
