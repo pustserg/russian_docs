@@ -59,10 +59,6 @@ defmodule RussianDocs.Snils do
     end
   end
 
-  defp only_numbers?(input) do
-    Regex.match?(~r/\D/, input)
-  end
-
   defp format_snils(input) do
     "#{String.slice(input, 0..2)}-#{String.slice(input, 3..5)}-#{String.slice(input, 6..8)} #{
       String.slice(input, 9..10)
