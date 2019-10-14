@@ -25,4 +25,17 @@ defmodule RussianDocs.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
+
+  defp description do
+    "Validates and format number of some russian docs"
+  end
+
+  defp package do
+    [
+      name: "russian docs",
+      files: ~w(lib test LICENSE mix.exs README.md),
+      licenses: ~w(MIT),
+      links: %{"Github" => "https://github.com/pustserg/russian_docs"}
+    ]
+  end
 end
