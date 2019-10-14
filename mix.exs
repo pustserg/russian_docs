@@ -34,7 +34,7 @@ defmodule RussianDocs.MixProject do
 
   defp package do
     [
-      name: "russian docs",
+      name: "russian_docs",
       files: ~w(lib test LICENSE mix.exs README.md),
       licenses: ~w(MIT),
       links: %{"Github" => "https://github.com/pustserg/russian_docs"}
